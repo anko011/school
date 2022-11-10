@@ -1,0 +1,38 @@
+.button {
+  cursor: pointer;
+  color: #292929;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  display: flex;
+}
+
+.button--primary {
+  color: #292929;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 1.2rem;
+}
+
+.button--primary:hover {
+  background-color: #e0452d;
+}
+
+.button--stretched {
+  border-bottom: 2px solid #0000;
+  border-radius: 0;
+  flex: 1;
+}
+
+.button--stretched:hover {
+  border-bottom: 2px solid #00392a;
+}
+

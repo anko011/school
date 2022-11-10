@@ -1,0 +1,35 @@
+include /src/components/logo/logo.pug
+include /src/components/menu/menu.pug
+
+block append css 
+    link(rel="stylesheet" href="/src/components/header/header.sass")
+
+mixin header()
+
+    -
+        const topMenu = [ 
+
+        ]
+
+    header.header 
+        .header__up-section
+            +logo(true)
+            +menu(
+                "primary",
+                {text: "RU", icon: "/src/assets/arrow.svg", alt: "Сменить язык"},
+                {text: "", icon: "/src/assets/eye.svg", alt: "Режим для слабовидящих"},
+                {text: "Личный кабинет", icon: "", alt: ""},
+                {text: "Сервисы", icon: "/src/assets/arrow.svg", alt: "Сервисы"},
+                {text: "Школьникам", icon: "", alt: ""},
+                {text: "Родителям", icon: "", alt: ""},
+            )
+
+        .header__down-section 
+            +menu(
+                "stretched",
+                {text: "Школа", icon: "", alt: ""},
+                {text: "Питание", icon: "", alt: ""},
+                {text: "Спортивный клуб СТАРТ", icon: "", alt: ""},
+
+            )
+
