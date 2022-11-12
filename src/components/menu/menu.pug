@@ -1,8 +1,5 @@
 include /src/components/button/button.pug
 
-block append css 
-    link(rel="stylesheet" href="/src/components/menu/menu.sass")
-
 mixin menu(variant="primary", ...list)
     - const variantClass = `menu menu--${variant}`
     nav(class=variantClass)
