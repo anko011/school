@@ -1,5 +1,9 @@
-mixin navCard(title, link, icon)
-    a(href=link).navCard.title.title--small
+mixin navCard(title, link, icon, bgImage)
+    a(
+        href=link,
+        class=`navCard title title--small navCard--${bgImage}`
+    )
         span.title--small.navCard__title= title 
         if icon
-            object(data=icon, type="image/svg+xml") 
+            svg.navCard__icon
+                use(xlink:href=`/src/assets/icons.svg#${icon}`)

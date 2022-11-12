@@ -6,33 +6,41 @@ mixin navCards()
             {
                 title: "Школа",
                 link: '/#',
+                bgImage: 'school'
             },
             {
                 title: "Питание",
                 link: '/#',
-                icon: '/src/assets/burger.svg'
+                icon: 'burger',
+                bgImage: 'food'
             },
             {
                 title: "Преподавательский состав",
                 link: '/#',
-                icon: '/src/assets/peoples.svg'
+                icon: 'peoples',
+                bgImage: 'teachers'
             },
             {
                 title: "Независимая оценка качетсва образования",
                 link: '/#',
+                bgImage: 'sie'
             },
             {
                 title: "Спортивный клуб",
                 link: '/#',
-                icon: '/src/assets/sportsman.svg'
+                icon: 'sportsman',
+                bgImage: 'sport'
             },
             {
                 title: "Документы",
                 link: '/#',
-                icon: '/src/assets/paper.svg'
+                icon: 'paper',
+                bgImage: 'docs'
             }
         ]
 
     .navCards 
-        each item in cards 
-            +navCard(item.title, item.link, item.icon)
+        h2.title.navCards__title Портальные ссылки
+        .navCards__body
+            each item in cards 
+                +navCard(item.title, item.link, item.icon, item.bgImage)

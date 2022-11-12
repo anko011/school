@@ -1,0 +1,15 @@
+mixin contacts()
+    .contacts 
+        form(action="#", method="post")
+            label.text Ваше имя
+                input(type="text")
+            label.text Ваш адрес электронной почты 
+                input(type="text")
+            label.text Тема
+                input(type="text")
+            label.text Сообщение
+                textarea(name="message", cols="30", rows="10") 
+            label.text Согласие на персональную обработку данных 
+                input(type="checkbox")
+            input(type="submit", value="Отправить")
+        .info 

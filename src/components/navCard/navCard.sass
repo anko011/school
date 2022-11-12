@@ -1,5 +1,6 @@
 @use '../../styles/color'
-    
+@use '../../styles/animation'
+
 .navCard
     display: flex
     justify-content: center
@@ -7,7 +8,42 @@
     gap: 1.2rem
     text-transform: uppercase
     text-decoration: none
-    background-color: color.$primary
     padding: 1.2rem
     border-radius: 0.6rem
+    background-size: cover
+    background-color: color.$primary
     background-image: color.$gradient-1
+
+    &:hover
+        background-image: none
+        color: color.$neitral-1
+
+        svg
+            fill: color.$neitral-1
+            stroke: color.$neitral-1
+
+    &__icon
+        max-width: 5rem
+
+    &--school:hover
+        background-image: url(/src/assets/bgCards/school.jpg)
+
+    &--food:hover
+        background-image: url(/src/assets/bgCards/food.jpg)
+        background-position-y: 70%
+
+    &--teachers:hover
+        background-image: url(/src/assets/bgCards/teachers.jpg)
+        background-position-y: 70%
+
+    &--sie:hover
+        background-image: url(/src/assets/bgCards/sie.jpg)
+        background-position-y: 75%
+
+    &--sport:hover
+        background-image: url(/src/assets/bgCards/sport.jpg)
+        background-position-y: 75%
+
+    &--docs:hover
+        background-image: url(/src/assets/bgCards/docs.jpg)
+        background-position-y: 75%

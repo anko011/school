@@ -1,5 +1,6 @@
-mixin button(variant="primary", text="", src="", alt="", isActive=false)
+mixin button(variant="primary", text="", icon, isActive=false)
     button(class=`button button--${variant} ${isActive ? 'button--active' : ''}`)=text 
-        if src
-            img(src=src, alt=alt)
+        if icon
+            svg.button__icon 
+                use(xlink:href=`/src/assets/icons.svg#${icon}`)
 

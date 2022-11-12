@@ -9,9 +9,10 @@ mixin newsCard(imageSide = 'left', img, title, description, data)
             p.text.text--small.newsCard__description= description
             footer.newsCard__footer
                 .newsCard__date 
-                    img(src="/src/assets/date.svg" alt="Дата новости")
+                    svg
+                        use(xlink:href=`/src/assets/icons.svg#calendar`)
                     span.text.text--superSmall= data
-                a(href="#").link Подробнее 
+                a(href="#").link.link--superSmall Подробнее 
 
         if imageSide == 'right'
             img(src=img.src, alt=img.alt).newsCard__img
