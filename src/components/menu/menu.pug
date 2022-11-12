@@ -7,4 +7,4 @@ mixin menu(variant="primary", ...list)
     - const variantClass = `menu menu--${variant}`
     nav(class=variantClass)
         each item in list 
-            +button(variant, item.text, item.icon, item.alt)
+            +button(variant, item.text, item.icon, item.alt, item.isActive)

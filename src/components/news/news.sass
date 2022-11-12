@@ -1,0 +1,25 @@
+@use '../../styles/color'
+@import '../../styles/typography'
+
+.news
+    &__menu
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+    &__title
+        @extend .title
+        color: color.$neitral-4
+        margin-top: 2.4rem
+        margin-bottom: 2.4rem
+
+    &__allNews
+        @extend .paragraph
+        @extend .paragraph--small
+        margin-left: auto
+        text-decoration: none
+        color: color.$primary
+
+    &__row
+        display: flex
+        flex-wrap: wrap

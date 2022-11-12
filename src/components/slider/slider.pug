@@ -1,0 +1,16 @@
+block append css 
+    link(rel="stylesheet" href="/src/components/slider/slider.sass")
+
+mixin slider()
+    .slider
+        .slider__content
+            .sldier__slide.slide 
+                .slide__title
+                .slider__image 
+                .slider__link
+        .slider__bar
+            button.slider__circleButton.slider__circleButton--active
+            button.slider__circleButton
+            button.slider__circleButton
+            button.slider__triangleButton.slider__triangleButton--left
+            button.slider__triangleButton.slider__triangleButton--right

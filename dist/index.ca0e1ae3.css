@@ -35,6 +35,10 @@
   font-size: 1.4rem;
 }
 
+.paragraph--superSmall {
+  font-size: 1.2rem;
+}
+
 .logo {
   max-width: 48rem;
   align-items: center;

@@ -10,7 +10,6 @@
   padding: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  transition-property: background-color, color;
   transition-duration: .3s;
   display: flex;
 }
@@ -20,6 +19,7 @@
   background-color: #e0e0e0;
   border: none;
   border-radius: 1.2rem;
+  transition-property: background-color;
 }
 
 .button--primary:hover {
@@ -30,9 +30,21 @@
   border-bottom: 2px solid #0000;
   border-radius: 0;
   flex: 1;
+  transition-property: border, color, background-color;
 }
 
 .button--stretched:hover {
+  color: #eee;
+  background-color: #a0a0a0;
   border-bottom: 2px solid #00392a;
+}
+
+.button--ghost {
+  color: #a0a0a0;
+  background-color: #0000;
+}
+
+.button--ghost:hover, .button--active {
+  color: #21a649;
 }
 

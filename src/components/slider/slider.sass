@@ -1,0 +1,61 @@
+@use '../../styles/color'
+@use '../../styles/animation'
+    
+.slider
+    height: 42.0rem
+    background-color: blue
+    position: relative
+
+    &__bar
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        gap: 2.4rem
+
+    &__circleButton
+        display: block 
+        width: 1.6rem
+        height: 1.6rem
+        border-radius: 50%
+        background: color.$neitral-1
+        margin-bottom: 3.2rem
+        cursor: pointer
+        border: 0px solid transparent
+        outline: none
+        transition: background-color animation.$baseDuration
+
+        &:hover
+            background-color: color.$primary
+
+        &--active
+            background-color: color.$primary
+
+    &__triangleButton
+        display: block
+        background-color: transparent
+        width: 0
+        height: 0 
+        cursor: pointer
+        border: 3.2rem solid transparent
+        border-right: 3.2rem solid color.$neitral-1
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        transition: border-color animation.$baseDuration
+        
+        &--left
+            left: 0
+
+        &--right
+            transform: translateY(-50%) rotate(180deg)
+            right: 0
+
+        &:hover
+            border-right: 3.2rem solid color.$primary
+        
+

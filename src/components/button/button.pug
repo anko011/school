@@ -1,8 +1,8 @@
 block append css 
     link(rel="stylesheet" href="/src/components/button/button.sass")
 
-mixin button(variant="primary", text="", src="", alt="")
-    button(class=`button button--${variant}`)=text 
+mixin button(variant="primary", text="", src="", alt="", isActive=false)
+    button(class=`button button--${variant} ${isActive ? 'button--active' : ''}`)=text 
         if src
             img(src=src, alt=alt)
 

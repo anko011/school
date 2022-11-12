@@ -3,6 +3,7 @@
 }
 
 .header__up-section {
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 2.4rem;

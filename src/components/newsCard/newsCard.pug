@@ -1,0 +1,20 @@
+block append css
+    link(rel="stylesheet" href="/src/components/newsCard/newsCard.sass")
+
+mixin newsCard(imageSide = 'left', img, title, description, data)
+    .newsCard
+        if imageSide == 'left'
+            img(src=img.src, alt=img.alt).newsCard__img
+
+        .newsCard__body
+            h3.newsCard__title= title
+            hr.newsCard__divider
+            p.newsCard__description= description
+            footer.newsCard__footer
+                .newsCard__date 
+                    img(src="/src/assets/date.svg" alt="Дата новости")
+                    span= data
+                a(href="#").newsCard__link Подробнее 
+
+        if imageSide == 'right'
+            img(src=img.src, alt=img.alt).newsCard__img
