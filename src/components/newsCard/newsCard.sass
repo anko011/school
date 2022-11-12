@@ -1,5 +1,4 @@
 @use '../../styles/color'
-@import '../../styles/typography'
 
 .newsCard
     display: flex
@@ -13,17 +12,15 @@
         gap: 1.2rem
 
     &__title
-        @extend .title
-        @extend .title--small
         text-transform: uppercase
 
     &__divider
         width: 100%
-        height: 1px
-        background-color: color.$primary
+        height: 0
+        border: none
+        border-top: 2px solid color.$primary
 
     &__description
-        @extend .paragraph
         text-align: justify
 
     &__footer
@@ -40,11 +37,4 @@
         gap: 1.2rem
 
         & > span
-            @extend .paragraph
-            @extend .paragraph--superSmall
             color: color.$neitral-3
-
-    &__link
-        @extend .paragraph
-        @extend .paragraph--superSmall
-        color: color.$primary

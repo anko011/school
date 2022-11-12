@@ -1,0 +1,8 @@
+mixin timetableCard(time, lesson, audit, teacher)
+    .timetableCard
+        span.text.text-small.timetableCard__time= time 
+        .timetableCard__body 
+            span.text.text-small.timetableCard__lesson= lesson 
+            hr.timetableCard__divider
+            span.text.text-small.timetableCard__audit= `Аудитория: ${audit}`
+            span.text.text-small.timetableCard__teacher= `Преподаватель: ${teacher}`

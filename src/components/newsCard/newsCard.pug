@@ -4,14 +4,14 @@ mixin newsCard(imageSide = 'left', img, title, description, data)
             img(src=img.src, alt=img.alt).newsCard__img
 
         .newsCard__body
-            h3.newsCard__title= title
+            h3.title.title--small.newsCard__title= title
             hr.newsCard__divider
-            p.newsCard__description= description
+            p.text.text--small.newsCard__description= description
             footer.newsCard__footer
                 .newsCard__date 
                     img(src="/src/assets/date.svg" alt="Дата новости")
-                    span= data
-                a(href="#").newsCard__link Подробнее 
+                    span.text.text--superSmall= data
+                a(href="#").link Подробнее 
 
         if imageSide == 'right'
             img(src=img.src, alt=img.alt).newsCard__img

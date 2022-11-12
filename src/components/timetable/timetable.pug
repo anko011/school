@@ -1,0 +1,47 @@
+include /src/components/button/button.pug
+include /src/components/timetableCard/timetableCard.pug
+
+mixin timetable()
+
+    -
+        const timecards = [
+            {
+                time: "8:30 - 9:30",
+                lesson: "Математика",
+                audit: "345",
+                teacher: "Курченко А.С."
+            },
+            {
+                time: "9:45 - 10:45",
+                lesson: "Русский язык",
+                audit: "214",
+                teacher: "Николаев А.Д."
+            },
+            {
+                time: "11:00 - 12:00",
+                lesson: "Литература",
+                audit: "214",
+                teacher: "Николаев А.Д."
+            },
+            {
+                time: "12:30 - 13:30",
+                lesson: "Информатика",
+                audit: "256",
+                teacher: "Тереньтев А.В."
+            },
+        ]
+
+
+    .timetable 
+        h2.title Расписание
+        .timetable__search 
+            label.text Введите класс 
+                input(type="text" name="timetable").timetable__input
+        .timetable__bar 
+            .timetable__filter
+                +button('ghost', 'Сегодня', '', '', true)
+                +button('ghost', 'Завтра')
+            a(href="#").link Расписание на неделю
+        .timetable__body 
+            each item in timecards
+                +timetableCard(item.time, item.lesson, item.audit, item.teacher)

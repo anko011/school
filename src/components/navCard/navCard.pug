@@ -1,0 +1,5 @@
+mixin navCard(title, link, icon)
+    a(href=link).navCard.title.title--small
+        span.title--small.navCard__title= title 
+        if icon
+            object(data=icon, type="image/svg+xml") 

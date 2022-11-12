@@ -1,0 +1,38 @@
+include /src/components/navCard/navCard.pug
+
+mixin navCards()
+    -
+        const cards = [
+            {
+                title: "Школа",
+                link: '/#',
+            },
+            {
+                title: "Питание",
+                link: '/#',
+                icon: '/src/assets/burger.svg'
+            },
+            {
+                title: "Преподавательский состав",
+                link: '/#',
+                icon: '/src/assets/peoples.svg'
+            },
+            {
+                title: "Независимая оценка качетсва образования",
+                link: '/#',
+            },
+            {
+                title: "Спортивный клуб",
+                link: '/#',
+                icon: '/src/assets/sportsman.svg'
+            },
+            {
+                title: "Документы",
+                link: '/#',
+                icon: '/src/assets/paper.svg'
+            }
+        ]
+
+    .navCards 
+        each item in cards 
+            +navCard(item.title, item.link, item.icon)

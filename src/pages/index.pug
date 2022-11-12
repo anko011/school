@@ -3,12 +3,14 @@ include /src/components/header/header.pug
 include /src/components/slider/slider.pug
 include /src/components/divider/divider.pug
 include /src/components/news/news.pug
+include /src/components/timetable/timetable.pug
+include /src/components/navCards/navCards.pug
 
 block title 
     title INDEX 
 
 block css 
-    link(rel="stylesheet", href="/src/pages/index.sass")
+    link(rel="stylesheet" href="/src/pages/index.sass")
 
 block content 
     +header()
@@ -16,5 +18,9 @@ block content
         +slider()  
         +divider()
         +news()
+        +divider()
+        +timetable()
+        +divider()
+        +navCards()
+
     footer Footer
-    

@@ -79,9 +79,9 @@ mixin news()
         const preparedNews = splitIntoPairs(news, 2)
 
     .news 
-        .news__menu
-            h2.news__title Новости
-            a(href="#").news__allNews Показать все новости
+        .news__header
+            h2.title Новости
+            a(href="#").link Показать все новости
         .news__content
 
             each row in preparedNews
