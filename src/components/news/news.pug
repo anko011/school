@@ -1,0 +1,95 @@
+include /src/components/menu/menu.pug
+include /src/components/newsCard/newsCard.pug
+
+block append css 
+    link(rel="stylesheet" href="/src/components/news/news.sass")
+
+mixin news()
+    -
+        const news = [
+            {
+                type: 'left',
+                img: {
+                    src: '/src/assets/news/photo-1.png',
+                    alt: 'Дети и поезд'
+                },
+                title: 'Азбука безопасности',
+                description: 'Железная дорога не место для игр, а зона повышенной опасности! Игры и невнимательность на объекте повышенной опасности — одна из главных причин травмирования детей.',
+                date: 'Вторник, 25 Ноября 2022 г.'
+            },
+            {
+                type: 'left',
+                img: {
+                    src: '/src/assets/news/photo-2.png',
+                    alt: 'Дети'
+                },
+                title: 'День победы',
+                description: 'День Победы – замечательный праздник, в этот день мы вспоминаем о великой Победе и о тех, кто отдал свои жизни ради неё. Так было и в этом году.',
+                date: 'Вторник, Мая, 10, 2022'
+            },
+            {
+                type: 'right',
+                img: {
+                    src: '/src/assets/news/photo-2.png',
+                    alt: 'Дети'
+                },
+                title: 'День победы',
+                description: 'День Победы – замечательный праздник, в этот день мы вспоминаем о великой Победе и о тех, кто отдал свои жизни ради неё. Так было и в этом году.',
+                date: 'Вторник, Мая, 10, 2022'
+            },
+            {
+                type: 'right',
+                img: {
+                    src: '/src/assets/news/photo-2.png',
+                    alt: 'Дети'
+                },
+                title: 'День победы',
+                description: 'День Победы – замечательный праздник, в этот день мы вспоминаем о великой Победе и о тех, кто отдал свои жизни ради неё. Так было и в этом году.',
+                date: 'Вторник, Мая, 10, 2022'
+            },
+            {
+                type: 'left',
+                img: {
+                    src: '/src/assets/news/photo-2.png',
+                    alt: 'Дети'
+                },
+                title: 'День победы',
+                description: 'День Победы – замечательный праздник, в этот день мы вспоминаем о великой Победе и о тех, кто отдал свои жизни ради неё. Так было и в этом году.',
+                date: 'Вторник, Мая, 10, 2022'
+            },
+            {
+                type: 'left',
+                img: {
+                    src: '/src/assets/news/photo-2.png',
+                    alt: 'Дети'
+                },
+                title: 'День победы',
+                description: 'День Победы – замечательный праздник, в этот день мы вспоминаем о великой Победе и о тех, кто отдал свои жизни ради неё. Так было и в этом году.',
+                date: 'Вторник, Мая, 10, 2022'
+            },
+        ]
+
+        const splitIntoPairs = (news, size) => {
+            const res = [];
+                for (let i = 0; i < news.length; i += size) {
+                    const chunk = news.slice(i, i + size);
+                    res.push(chunk);
+                }
+            return res;
+        } 
+
+        const preparedNews = splitIntoPairs(news, 2)
+
+    .news 
+        .news__menu
+            h2.news__title Новости
+            a(href="#").news__allNews Показать все новости
+        .news__content
+
+            each row in preparedNews
+                .news__row
+                    each item in row 
+                        +newsCard(item.type, item.img, item.title, item.description, item.date)
+
+        .news__pagination
+            
