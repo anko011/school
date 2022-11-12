@@ -1,0 +1,15 @@
+block append css 
+    link(rel="stylesheet" href="/src/components/pagination/pagination.sass")
+
+mixin pagination(num)
+    - let n = 2
+    .pagination
+        +button("outline", "1", "", "", true)
+        
+        while n < num
+            if (n <= 3)
+                +button("outline", n)
+            - n++
+
+        +button("outline", "...")
+        +button("outline", num)

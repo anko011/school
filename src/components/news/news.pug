@@ -1,5 +1,6 @@
 include /src/components/menu/menu.pug
 include /src/components/newsCard/newsCard.pug
+include /src/components/pagination/pagination.pug
 
 block append css 
     link(rel="stylesheet" href="/src/components/news/news.sass")
@@ -92,4 +93,4 @@ mixin news()
                         +newsCard(item.type, item.img, item.title, item.description, item.date)
 
         .news__pagination
-            
+            +pagination(10)
